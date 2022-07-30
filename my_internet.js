@@ -102,7 +102,7 @@ const computer4 = () => {
       const domain = urlArray[0]
 
       htmlDoc.querySelectorAll('a').forEach(aElement => {
-        const newWebsiteUrl = (aElement.hostname) ? aElement.href : 'https://' + domain + aElement.pathname
+        const newWebsiteUrl = (!(aElement.getAttribute('href').startsWith('/'))) ? aElement.href : 'https://' + domain + aElement.pathname
         crawlingQueue.push(newWebsiteUrl)
       })
       const title = htmlDoc.querySelector('title')
