@@ -18,7 +18,7 @@ const displayDocument = () => {
 
   htmlDoc.querySelectorAll('a').forEach(aElement => {
     const newWebsiteUrl = (aElement.hostname) ? aElement.href : 'https://' + domain + aElement.pathname
-    aElement.href = "#"
+    aElement.href = "javascript:void(0)"
     aElement.addEventListener('click', () => {
       targetUrl.value = newWebsiteUrl
       displayDocument()
