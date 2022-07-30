@@ -138,8 +138,6 @@ const computer4 = () => {
        </div>
       `
     }).join('\n')
-    console.log('websites', websites)
-    console.log('result', result)
 
     return `<html>
       <title>グーグー</title>
@@ -149,8 +147,6 @@ const computer4 = () => {
       </script>
      </html>`
   }
-
-  // console.log('COMPUTER4', search(null, 'マツリカ'))
 
   return {
     webServer: {
